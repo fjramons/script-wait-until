@@ -42,7 +42,7 @@ my_condition() {
 }
 
 # Waits until the pod is ready - timeouts if not ready in 5 minutes (default)
-monitor_condition my_condition "Waiting por the pod to be ready...\n"
+monitor_condition my_condition "Waiting for the pod to be ready...\n"
 
 # If timed-out, the script must exit ungracefully
 [ ! $? ] || echo "ABORTING: The pod could not reach the ready state." && exit 1
