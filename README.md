@@ -6,7 +6,7 @@ The helper function `monitor_condition`, defined at the `wait-until.sh` file, ai
 
 This helper functions is a convenient alternative to the well-known `timeout` command when the condition is not the result of a simple command run, but requires a series of verifications and conditionals to be made and creating separate standalone scripts is not feasible or advisable.
 
-The helper function is designed to wait for the condition only until a timeout limit, when the execution would return an abnormal status. Hence, this status must **always be tested before continuing the execution**, since there is no guarantee that the condition has been meet during the period.
+The helper function is designed to wait for the condition only until a timeout limit, when the execution would return an abnormal status. Hence, this status must **always be tested before continuing the execution**, since there is no guarantee that the condition has been met during the period.
 
 ## Syntax
 
