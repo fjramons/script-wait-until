@@ -38,7 +38,7 @@ source ./wait-until.sh
 # E.g.
 # - Check if the pod `my_pod` is ready in a K8s cluster
 my_condition() {
-    kubectl get pod/my_pod -n my_namespace | grep -i ready > /dev/null 2>&1
+    kubectl get pod/my_pod -n my_namespace | grep -E '(\d*)\/\1' > /dev/null 2>&1
 }
 
 # Waits until the pod is ready - timeouts if not ready in 5 minutes (default)
