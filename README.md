@@ -45,7 +45,7 @@ my_condition() {
 monitor_condition my_condition "Waiting for the pod to be ready...\n"
 
 # If timed-out, the script must exit ungracefully
-[ ! $? ] || echo "ABORTING: The pod could not reach the ready state." && exit 1
+[ $? -eq 0 ] || { echo "ABORTING: The pod could not reach the ready state."; exit 1; }
 
 # Otherwise, the script continues normally
 
